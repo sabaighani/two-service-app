@@ -1,0 +1,14 @@
+{
+    "name": "two-service-backend",
+    "version": "1.0.0",
+    "description":"simple API backend ",
+    "main":"server.js",
+    "scripts":{
+        "start":"node server.js"
+
+    },
+    "dependencies": {
+        "express":"^4.18.2"
+    }
+
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two-Service App</title>
+</head>
+<body>
+  <h1>Two-Service App</h1>
+  <p id="message">Loading...</p>
+  <script>
+    fetch('/api/message')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('message').textContent = data.text;
+      })
+      .catch(err => {
+        document.getElementById('message').textContent = 'Error: ' + err.message;
+      });
+  </script>
+</body>
+</html>
