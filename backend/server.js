@@ -3,7 +3,7 @@ const app= express();
 const port =5000;
 
 function getMessage (req,res){
-    res.json({text:"Hello from the backend",status:'ok'})
+   res.json({ text: 'CI/CD works! Backend v2', status: 'ok' });
 }
 app.get('/api/message',getMessage)
 app.listen(port,()=>{
