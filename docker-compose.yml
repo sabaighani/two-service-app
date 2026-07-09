@@ -4,12 +4,15 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    image: sabaaa/two-service-backend:latest
     
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    image: sabaaa/two-service-frontend:latest
     ports:
         - "9090:80"
     depends_on:
         - backend
+        
