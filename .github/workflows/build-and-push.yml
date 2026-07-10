@@ -34,4 +34,6 @@ jobs:
         with:
           context: ./${{matrix.service}}
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/two-service-${{matrix.service}}:latest
+          tags: 
+            ${{secrets.DOCKER_USERNAME}}/two-service-${{matrix.service}}:latest
+            ${{ steps.login-ecr.outputs.registry }}/two-service-${{ matrix.service }}:lat
